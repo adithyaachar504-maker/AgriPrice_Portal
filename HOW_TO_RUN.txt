@@ -1,0 +1,38 @@
+╔══════════════════════════════════════════════════════╗
+║         AgriPrice Portal — How To Run                ║
+╚══════════════════════════════════════════════════════╝
+
+FIRST TIME SETUP (do this only once):
+══════════════════════════════════════
+1. Open PowerShell as Administrator and run:
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+2. Install Python packages (in PowerShell):
+   cd python_model
+   pip install Flask flask-cors pandas scikit-learn PyPDF2 requests
+   cd ..
+
+3. Install Node packages (in PowerShell):
+   npm install
+
+══════════════════════════════════════════════════════
+
+EVERY TIME YOU WANT TO RUN:
+══════════════════════════════════════════════════════
+1. Open XAMPP → Start MySQL + Apache
+
+2. Open PowerShell in the final_project folder:
+   node server.js
+
+   (Python model starts automatically!)
+
+3. Open browser: http://localhost:3000
+
+══════════════════════════════════════════════════════
+
+WHAT RUNS WHERE:
+  Node.js server  → http://localhost:3000  (main website)
+  Python model    → http://localhost:5000  (auto-started)
+  MySQL database  → port 3306 (XAMPP)
+
+══════════════════════════════════════════════════════
